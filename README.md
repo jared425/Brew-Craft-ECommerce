@@ -12,7 +12,8 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
 ---
 ## Features
 - User authentication with email verification to ensure real users. 
-- Product CRUD (Create, Read, Update, Delete). With the admin section of the project.
+- Product CRUD (Create, Read, Update, Delete) with the admin login credentials
+- Admin can respond to queries, compliments and complaints. 
 - Payment systems where users can choose between the three most popular payment options.
 - Filters in the product page to make the website more user friendly.
 - Product Detail page to show a detailed product description. 
@@ -43,30 +44,31 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
    - PHP 
    - MySQL
    - **[Composer](https://getcomposer.org/download/)** You MUST HAVE THIS INSTALLED AND WHEN INSTALLING MAKE SURE YOU ADD COMPOSER TO PHP PATH.
-   - After installing Composer you can now open your GitBash and run
+   - After installing Composer you can now open your GitBash and run the promnt below this is to ensure composer is installed.
    ```bash
     composer --version
     ```
 
-2.  **Install PHP Dependencies** using Composer:
+3.  **Install PHP Dependencies** using Composer:
     ```bash
     composer install
     ```
     *Open a bash terminal in VS Code and run the above command, this command will create the necessary `vendor` folder and autoload files.*
 
-3. **Set up the database**
-   - Open the ecommerce-cafe.sql file in MYSQL and run all the code (CTR+SHIFT+ENTER)
+4. **Set up the database**
+   - Open the ecommerce-cafe.sql file in MYSQL and run all the code
 
-4. **Configure database connection**
+5. **Configure database connection**
    - Open `db.php`
    - Update the database host, username, password, and database name to match your environment
 
-5. **Set up your web server**
-   - Place the project files in your web root (e.g., `htdocs` folder)
+6. **Set up your web server**
+   - Place the project folder in your web root (e.g., `htdocs` folder)
    - Make sure PHP is enabled and your web server is running
 
 7. **Access the application**
-   - Open your browser and go to `http://localhost/` what the folder is saved as on your local computer put that after the slash nect tp localhost
+   - Open XAMP, in Apache press start and then press admin
+   - In your URL next to localhost put the name of the folder you saved it as in your `htdocs` folder
 ---
 ## Usage
 - Admin credentials for CRUD (Create, Read, Update, Delete):
@@ -83,5 +85,4 @@ Contributions, issues, and feature requests are welcome!
 For support or inquiries, contact:
 **Jared Van Schalkwyk**
 Email: jaredjerome16@gmail.com
-GitHub: [Jared Van Schalkwyk](https://github.com/jared425/HR-System.git)
 ---
