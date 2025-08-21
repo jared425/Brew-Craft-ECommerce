@@ -34,22 +34,36 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
 - HTML5 & CSS3
 ---
 ## Installation
-1. **Clone the repository**
-   ``` https://github.com/jared425/HR-System.git ```
-2. **Set up the database**
-   - Create a new MySQL database (e.g., `cafe_ecommerce`)
-   - Import the `ecommerce-cafe.sql` file included in the repo to create tables and sample data
-3. **Configure database connection**
+1. **Download the zip version of the project**
+   ``` https://github.com/jared425/Brew-Craft-ECommerce/tree/Coding-Branch ```
+
+2. **Prerequisites**
+   Before running this project, ensure you have the following installed on your local machine:
+   - A web server (e.g., [XAMPP](https://www.apachefriends.org/))
+   - PHP 
+   - MySQL
+   - **[Composer](https://getcomposer.org/download/)** You MUST HAVE THIS INSTALLED AND WHEN INSTALLING MAKE SURE YOU ADD COMPOSER TO PHP PATH.
+   - After installing Composer you can now open your GitBash and run 'composer --version' (dont run it with the quotes) to ensure that composer is installed on your local computer.
+
+2.  **Install PHP Dependencies** using Composer:
+    ```bash
+    composer install
+    ```
+    *Open a bash terminal in VS Code and run the above command, this command will create the necessary `vendor` folder and autoload files.*
+
+3. **Set up the database**
+   - Open the ecommerce-cafe.sql file in MYSQL and run all the code (CTR+SHIFT+ENTER)
+
+4. **Configure database connection**
    - Open `db.php`
    - Update the database host, username, password, and database name to match your environment
-4. **Install composer for email verification feature**
-   - Run the composer setup file that is included in the folder.
-   - Finish the installation.
+
 5. **Set up your web server**
    - Place the project files in your web root (e.g., `htdocs` folder)
    - Make sure PHP is enabled and your web server is running
-6. **Access the application**
-   - Open your browser and go to `http://localhost/ecommerce-cafe-main/` or your deployed URL
+
+7. **Access the application**
+   - Open your browser and go to `http://localhost/` what the folder is saved as on your local computer put that after the slash nect tp localhost
 ---
 ## Usage
 - Admin credentials for CRUD (Create, Read, Update, Delete):
