@@ -63,7 +63,7 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
    - Make sure PHP is enabled and your web server is running
 
 7. **Access the application**
-   - Open your browser and go to `http://localhost/` what the folder is saved as on your local computer put that after the slash nect tp localhost
+   - Open your browser and go to `http://localhost/` what the folder is saved as on your local computer put that after the slash next to localhost
 ---
 ## Usage
 - Admin credentials for CRUD (Create, Read, Update, Delete):
@@ -80,5 +80,6 @@ Contributions, issues, and feature requests are welcome!
 For support or inquiries, contact:
 **Jared Van Schalkwyk**
 Email: jaredjerome16@gmail.com
-GitHub: [Jared Van Schalkwyk](https://github.com/jared425/HR-System.git)
+GitHub: [Jared Van Schalkwyk][(https://github.com/jared425/Brew-Craft-ECommerce/tree/Coding-Branch)]
 ---
+
