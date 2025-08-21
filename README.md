@@ -43,7 +43,10 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
    - PHP 
    - MySQL
    - **[Composer](https://getcomposer.org/download/)** You MUST HAVE THIS INSTALLED AND WHEN INSTALLING MAKE SURE YOU ADD COMPOSER TO PHP PATH.
-   - After installing Composer you can now open your GitBash and run 'composer --version' (dont run it with the quotes) to ensure that composer is installed on your local computer.
+   - After installing Composer you can now open your GitBash and run
+   ```bash
+    composer --version
+    ```
 
 2.  **Install PHP Dependencies** using Composer:
     ```bash
@@ -63,7 +66,7 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
    - Make sure PHP is enabled and your web server is running
 
 7. **Access the application**
-   - Open your browser and go to `http://localhost/` what the folder is saved as on your local computer put that after the slash next to localhost
+   - Open your browser and go to `http://localhost/` what the folder is saved as on your local computer put that after the slash nect tp localhost
 ---
 ## Usage
 - Admin credentials for CRUD (Create, Read, Update, Delete):
@@ -80,6 +83,5 @@ Contributions, issues, and feature requests are welcome!
 For support or inquiries, contact:
 **Jared Van Schalkwyk**
 Email: jaredjerome16@gmail.com
-GitHub: [Jared Van Schalkwyk][(https://github.com/jared425/Brew-Craft-ECommerce/tree/Coding-Branch)]
+GitHub: [Jared Van Schalkwyk](https://github.com/jared425/HR-System.git)
 ---
-
