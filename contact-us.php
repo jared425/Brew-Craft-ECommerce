@@ -11,7 +11,42 @@
 </head>
 <body>
     <?php include 'navbar.php' ?>
-
+<?php
+// Add this at the top of contact-us.php, after the opening PHP tag if it exists
+// session_start();
+require_once 'functions.php'; // Make sure this file includes your database connection
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $subject = trim($_POST['subject']);
+    $message = trim($_POST['message']);
+    // Basic validation
+    $errors = [];
+    if (empty($name)) $errors[] = "Name is required";
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Valid email is required";
+    if (empty($subject)) $errors[] = "Subject is required";
+    if (empty($message)) $errors[] = "Message is required";
+    if (empty($errors)) {
+        try {
+            $stmt = $pdo->prepare("INSERT INTO contact_messages (name, email, subject, message) VALUES (?, ?, ?, ?)");
+            $stmt->execute([$name, $email, $subject, $message]);
+            // Show success modal
+            echo '<script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var successModal = new bootstrap.Modal(document.getElementById("successModal"));
+                    successModal.show();
+                });
+            </script>';
+        } catch (PDOException $e) {
+            $errors[] = "Error sending message: " . $e->getMessage();
+        }
+    }
+    // If there are errors, store them in session to display
+    if (!empty($errors)) {
+        $_SESSION['contact_errors'] = $errors;
+    }
+}
+?>
     <!-- Contact Us Heading -->
         <div class="contact-container py-5">
             <div class="row">
@@ -21,7 +56,16 @@
                 </div>
             </div>
         </div>
-
+        <?php if (isset($_SESSION['contact_errors'])): ?>
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            <?php foreach ($_SESSION['contact_errors'] as $error): ?>
+                <li><?= htmlspecialchars($error) ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <?php unset($_SESSION['contact_errors']); ?>
+<?php endif; ?>
     <!-- Success Modal -->
     <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
@@ -143,16 +187,11 @@
     </section>
     <?php include 'footer.php' ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Show the success modal
-            var successModal = new bootstrap.Modal(document.getElementById('successModal'));
-            successModal.show();
-            // Reset the form
-            this.reset();
-        });
-    </script>
+   <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Let the form submit normally (PHP will handle it)
+        // The PHP code will show the modal if successful
+    });
+</script>
 </body>
 </html>
