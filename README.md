@@ -12,17 +12,17 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
 ---
 ## Features
 - User authentication with email verification to ensure real users. 
-- Product CRUD (Create, Read, Update, Delete) with the admin login credentials
-- Admin can respond to queries, compliments and complaints. 
+- Admin user for product CRUD (Create, Read, Update, Delete).
+- Admin can view queries, compliments and complaints that are sent via the contact us page. 
 - Payment systems where users can choose between the three most popular payment options.
-- Filters in the product page to make the website more user friendly.
-- Product Detail page to show a detailed product description. 
+- Filters and Sort by in the product page to make the website more user friendly.
+- Product Detail page to show a detailed product description that also shows related products. 
 - Responsiveness for all devices. 
-- Secure password handling with passwrod hashing and form validation. 
+- Secure password handling with password hashing and form validation. 
 - Contact Us page for users to raise issues or just give feedback.
-- About Us for users to learn about our objectives.
-- My Account section for the user to edit or just view their information.
-- Payment Methods page for the user to edit their payment options and change their default paying method.
+- About Us for users to learn about us.
+- My Account section for the user to edit or just view their account information.
+- Payment Methods page for the user to edit/delete/create their payment options.
 - Functional Footer for a more convinient user experience.
 - Social media links in both the footer and the Contact Us page. 
 ---
@@ -38,7 +38,7 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
 1. **Download the zip version of the project**
    ``` https://github.com/jared425/Brew-Craft-ECommerce/tree/Coding-Branch ```
 
-2. **Prerequisites**
+3. **Prerequisites**
    Before running this project, ensure you have the following installed on your local machine:
    - A web server (e.g., [XAMPP](https://www.apachefriends.org/))
    - PHP 
@@ -49,24 +49,25 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
     composer --version
     ```
 
-3.  **Install PHP Dependencies** using Composer:
+4.  **Install PHP Dependencies** using Composer:
     ```bash
     composer install
     ```
     *Open a bash terminal in VS Code and run the above command, this command will create the necessary `vendor` folder and autoload files.*
+    *IF YOU GET THE ERROR 'COMPOSER NOT FOUND' TRY CLOSING AND REOPENING VS CODE*
 
-4. **Set up the database**
+6. **Set up the database**
    - Open the ecommerce-cafe.sql file in MYSQL and run all the code
 
-5. **Configure database connection**
+7. **Configure database connection**
    - Open `db.php`
    - Update the database host, username, password, and database name to match your environment
 
-6. **Set up your web server**
+8. **Set up your web server**
    - Place the project folder in your web root (e.g., `htdocs` folder)
    - Make sure PHP is enabled and your web server is running
 
-7. **Access the application**
+9. **Access the application**
    - Open XAMP, in Apache press start and then press admin
    - In your URL next to localhost put the name of the folder you saved it as in your `htdocs` folder
 ---
@@ -79,10 +80,11 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
 - When signing up the user must verify their by clicking the link sent to the email they provided.
 ---
 ## Contributing
-Contributions, issues, and feature requests are welcome!
+- Contributions, issues, and feature requests are welcome!
 ---
 ## Contact
-For support or inquiries, contact:
+- For support or inquiries, contact:
 **Jared Van Schalkwyk**
 Email: jaredjerome16@gmail.com
 ---
+
