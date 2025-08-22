@@ -7,7 +7,7 @@ if (isLoggedIn()) {
 }
 $error = '';
 $success = '';
-// Handle registration form submission
+// Signing up form handling
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
     $email = trim($_POST['email']);
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
-    /* Signup specific styles */
+    /* Inline styling for signup form*/
     .signup-container {
         display: flex;
         justify-content: center;
@@ -265,4 +265,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php include 'footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
