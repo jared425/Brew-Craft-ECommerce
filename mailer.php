@@ -13,24 +13,23 @@ function sendVerificationEmail($email, $name, $token) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'jaredjerome16@gmail.com'; // Your Gmail
-        $mail->Password   = 'kvup xcue roee gwiz';     // App Password
+        $mail->Username   = 'jaredjerome16@gmail.com';
+        $mail->Password   = 'kvup xcue roee gwiz';     // 2nd Factor Authentication App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
-        $mail->SMTPDebug  = 2; // Enable verbose debug output
+        $mail->SMTPDebug  = 2;
         $mail->Debugoutput = function($str, $level) {
             error_log("SMTP: $str");
         };
 
         // Recipients
-        $mail->setFrom('jaredjerome16@gmail.com', 'Coffee Brews');
+        $mail->setFrom('jaredjerome16@gmail.com', 'Brww Craft');
         $mail->addAddress($email, $name);
 
         // Content
         $mail->isHTML(true);
         $mail->Subject = 'Verify Your Email Address';
         
-        // In mailer.php
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
         $host = $_SERVER['HTTP_HOST'];
         $path = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
@@ -56,4 +55,5 @@ function sendVerificationEmail($email, $name, $token) {
         return false;
     }
 }
+
 ?>
