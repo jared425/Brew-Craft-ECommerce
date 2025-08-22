@@ -15,7 +15,7 @@ body {
   line-height: 1.6;
 }
 
-/* Navigation */
+/* Nav bar styling */
 .navbar {
   background-color: var(--black) !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -65,7 +65,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Hover State */
+/* Hover styles */
 .btn-primary:hover {
   background-color: white;
   border-color: var(--light-coffee);
@@ -73,7 +73,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Focus State */
 .btn-primary:focus {
   background-color: white;
   border-color: var(--light-coffee);
@@ -81,7 +80,7 @@ body {
   box-shadow: 0 0 0 0.25rem rgba(134, 95, 70, 0.25);
 }
 
-/* Active State */
+/* Active State, this is to combat bootstraps colours*/
 .btn-primary:active,
 .btn-primary.active {
   background-color: var(--dark-coffee) !important;
@@ -299,7 +298,8 @@ footer a:hover {
     flex-grow: 1; /* Pushes footer to the bottom */
 }
 
-/* Tertiary Button Styles */
+/* Tertiary Button Styles this button is used in the homepage only*/
+/* This button was inspired by UI Verse */
 .fancy {
  background-color: transparent;
  border: 2px solid #000;
@@ -1891,7 +1891,6 @@ input[type="number"]:focus {
 }
 
 /* ========== ABOUT & CONTACT PAGE STYLING ========== */
-/* Color Variables */
 :root {
   --light-coffee: #865f46;
   --dark-coffee: #3a2e26;
@@ -2089,7 +2088,7 @@ input[type="number"]:focus {
     border-right-color: transparent;
 }
 
-/* Coffee steam animation for fun (optional) */
+/* Coffee steam animation for fun */
 .coffee-steam {
     position: absolute;
     width: 8px;
@@ -2236,4 +2235,5 @@ input[type="number"]:focus {
 .video-about .btn-outline-primary:hover {
     background-color: #865f46;
     color: white;
+
 }
