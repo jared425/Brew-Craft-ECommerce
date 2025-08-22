@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $methodId = $_POST['method_id'];
         
         try {
-            // First check if this payment method is used in any orders
+            // First check if this payment method is used in any orders, it wouldn't make sense to delete a payment method that is being used
             $stmt = $pdo->prepare("SELECT COUNT(*) as order_count FROM orders WHERE payment_method_id = ?");
             $stmt->execute([$methodId]);
             $result = $stmt->fetch();
@@ -224,7 +224,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                     </div>
                     
-                    <!-- Add Card Form -->
+                    <!-- Add Debit/Credit Card form -->
                     <div class="card mb-4">
                         <div class="card-header bg-primary text-white">
                             <h5 class="mb-0">Add Credit/Debit Card</h5>
@@ -256,7 +256,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                     </div>
                     
-                    <!-- Add PayPal Form -->
+                    <!-- Add PayPal Account Form -->
                     <div class="card mb-4">
                         <div class="card-header bg-primary text-white">
                             <h5 class="mb-0">Add PayPal Account</h5>
@@ -278,7 +278,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                     </div>
                     
-                    <!-- Add Ozow Form -->
+                    <!-- Add Ozow Account Form -->
                     <div class="card">
                         <div class="card-header bg-primary text-white">
                             <h5 class="mb-0">Add Ozow Account</h5>
@@ -332,7 +332,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script>
-        // Format card number as 4 groups of 4 digits
+        // Format card number as 4 groups of 4 digits for professionalism
         function formatCardNumber(input) {
             // Remove all non-digits
             let value = input.value.replace(/\D/g, '');
@@ -378,8 +378,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             // Get current date parts
             const currentDate = new Date();
-            const currentYear = currentDate.getFullYear() % 100; // Get last 2 digits
-            const currentMonth = currentDate.getMonth() + 1; // Months are 0-indexed
+            const currentYear = currentDate.getFullYear() % 100;
+            const currentMonth = currentDate.getMonth() + 1;
             
             // Validate month
             if (month < 1 || month > 12) {
@@ -434,4 +434,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         });
     </script>
 </body>
+
 </html>
