@@ -12,9 +12,8 @@
 <body>
     <?php include 'navbar.php' ?>
 <?php
-// Add this at the top of contact-us.php, after the opening PHP tag if it exists
-// session_start();
-require_once 'functions.php'; // Make sure this file includes your database connection
+
+require_once 'functions.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
@@ -30,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $stmt = $pdo->prepare("INSERT INTO contact_messages (name, email, subject, message) VALUES (?, ?, ?, ?)");
             $stmt->execute([$name, $email, $subject, $message]);
-            // Show success modal
+            // Shows success modal
             echo '<script>
                 document.addEventListener("DOMContentLoaded", function() {
                     var successModal = new bootstrap.Modal(document.getElementById("successModal"));
@@ -41,7 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors[] = "Error sending message: " . $e->getMessage();
         }
     }
-    // If there are errors, store them in session to display
     if (!empty($errors)) {
         $_SESSION['contact_errors'] = $errors;
     }
@@ -189,9 +187,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
    <script>
     document.getElementById('contactForm').addEventListener('submit', function(e) {
-        // Let the form submit normally (PHP will handle it)
-        // The PHP code will show the modal if successful
     });
 </script>
 </body>
 </html>
+
