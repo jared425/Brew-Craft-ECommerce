@@ -138,7 +138,7 @@ function createOrder($userId, $paymentMethodId, $totalAmount) {
             ");
             $stmt->execute([$orderId, $item['product_id'], $item['quantity'], $item['price']]);
             
-            // Update product stock (optional)
+            // Update product stock
             $stmt = $pdo->prepare("UPDATE products SET stock = stock - ? WHERE id = ?");
             $stmt->execute([$item['quantity'], $item['product_id']]);
         }
@@ -221,4 +221,5 @@ function isVerified() {
     
     return $user && $user['is_verified'];
 }
+
 ?>
