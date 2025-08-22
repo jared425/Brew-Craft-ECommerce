@@ -162,7 +162,7 @@ if (!$product) {
                 button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Adding...';
                 button.disabled = true;
                 
-                // User is logged in - add to cart via AJAX
+                // User is logged in
                 fetch('add-to-cart.php', {
                     method: 'POST',
                     headers: {
@@ -186,7 +186,7 @@ if (!$product) {
                             setTimeout(() => cartBadge.classList.remove('animate-bounce'), 1000);
                         }
                         
-                        // Show coffee-themed success message
+                        // Coffee-themed animation
                         Swal.fire({
                             title: 'Brew-tiful!',
                             text: 'Added to your coffee stash!',
@@ -229,7 +229,7 @@ if (!$product) {
                     });
                 });
             <?php else: ?>
-                // User not logged in - redirect to login
+                // Redirects the user if they are not logged in
                 window.location.href = 'login.php?redirect=' + encodeURIComponent(window.location.href);
             <?php endif; ?>
         });
@@ -237,4 +237,5 @@ if (!$product) {
 });
     </script>
 </body>
+
 </html>
