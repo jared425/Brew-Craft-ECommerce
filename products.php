@@ -177,7 +177,7 @@ if (!empty($filters['category']) && isset($categoryTitles[$filters['category']])
                 button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Adding...';
                 button.disabled = true;
                 
-                // User is logged in - add to cart via AJAX
+                // User is logged in then add to cart
                 fetch('add-to-cart.php', {
                     method: 'POST',
                     headers: {
@@ -201,7 +201,7 @@ if (!empty($filters['category']) && isset($categoryTitles[$filters['category']])
                             setTimeout(() => cartBadge.classList.remove('animate-bounce'), 1000);
                         }
                         
-                        // Show coffee-themed success message
+                        // Coffee Animation
                         Swal.fire({
                             title: 'Brew-tiful!',
                             text: 'Added to your coffee stash!',
@@ -244,7 +244,7 @@ if (!empty($filters['category']) && isset($categoryTitles[$filters['category']])
                     });
                 });
             <?php else: ?>
-                // User not logged in - redirect to login
+                // Redirects if the user is not logged in
                 window.location.href = 'login.php?redirect=' + encodeURIComponent(window.location.href);
             <?php endif; ?>
         });
@@ -252,4 +252,5 @@ if (!empty($filters['category']) && isset($categoryTitles[$filters['category']])
 });
     </script>
 </body>
+
 </html>
