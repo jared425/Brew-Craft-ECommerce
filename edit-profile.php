@@ -7,7 +7,7 @@ $userId = $_SESSION['user_id'];
 $error = '';
 $success = '';
 
-// Get current user data
+// Gets the current users data
 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
 $stmt->execute([$userId]);
 $user = $stmt->fetch();
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ");
                 $stmt->execute([$firstName, $lastName, $email, $phone, $address, $userId]);
                 
-                // Handle password change if provided
+                // Password change handling
                 if (!empty($currentPassword)) {
                     if (empty($newPassword) || empty($confirmPassword)) {
                         $error = "New password and confirmation are required";
@@ -201,4 +201,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
