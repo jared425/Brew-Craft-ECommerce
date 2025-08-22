@@ -196,12 +196,12 @@ if (!empty($filters['category']) && isset($categoryTitles[$filters['category']])
                         const cartBadge = document.querySelector('.navbar .badge');
                         if (cartBadge) {
                             cartBadge.textContent = parseInt(cartBadge.textContent || '0') + 1;
-                            // Add animation to cart badge
+                            // Animation for cart badge
                             cartBadge.classList.add('animate-bounce');
                             setTimeout(() => cartBadge.classList.remove('animate-bounce'), 1000);
                         }
                         
-                        // Coffee Animation
+                        // Coffee themed animation when user adds to cart
                         Swal.fire({
                             title: 'Brew-tiful!',
                             text: 'Added to your coffee stash!',
@@ -254,3 +254,4 @@ if (!empty($filters['category']) && isset($categoryTitles[$filters['category']])
 </body>
 
 </html>
+
