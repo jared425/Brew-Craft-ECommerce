@@ -79,6 +79,13 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
 - User can only purchase, add to cart etc when they create an account and verify it. 
 - When signing up the user must verify their by clicking the link sent to the email they provided.
 ---
+## Contributions & Group members
+- Aaliyah Vermeulen
+- Jared Van Schalkwyk
+- Joshua Bihute
+- Mpumelelo Magatya
+- Yonelisa Maliwa
+
 ## Contributing
 - Contributions, issues, and feature requests are welcome!
 ---
@@ -87,4 +94,5 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
 **Jared Van Schalkwyk**
 Email: jaredjerome16@gmail.com
 ---
+
 
