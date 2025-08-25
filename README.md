@@ -84,7 +84,7 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
 - Jared Van Schalkwyk - **Backend, database and frontend styling**
 - Joshua Bihute - **Contact us, about us and frontend styling**
 - Mpumelelo Magatya - **Products page, database and frontend styling**
-- Yonelisa Maliwa **Part 1, 4 and frontend styling**
+- Yonelisa Maliwa - **Part 1, 4 and frontend styling**
 
 ## Contributing
 - Contributions, issues, and feature requests are welcome!
@@ -94,6 +94,7 @@ Welcome to  **Brew Craft**, this E-Commerce website is designed to bring the caf
 **Jared Van Schalkwyk**
 Email: jaredjerome16@gmail.com
 ---
+
 
 
 
